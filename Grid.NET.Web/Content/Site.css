@@ -1,4 +1,7 @@
-﻿body {
+﻿
+@charset "utf-8";
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -21,4 +24,147 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/*NEWLY ADDED FOR GRID*/
+
+.easing {
+    transition: all .25s;
+}
+
+
+.list-table {
+    margin-bottom: 10px;
+}
+
+    .list-table ul {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #f2f2f2;
+    }
+
+.table-results .results:nth-child(odd) {
+    background: #fff;
+}
+
+
+
+.list-table ul li {
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+    line-height: normal;
+    padding: 7px 5px 3px 5px;
+}
+
+.table-header {
+    border-bottom: 1px solid #ccc;
+}
+
+    .table-header .header {
+        color: #444;
+        width: 100%;
+        font-weight: bold;
+        line-height: 30px;
+        background: #fff;
+        cursor: pointer;
+    }
+
+        .table-header .header li:hover {
+          background:rgba(41, 109, 193,.15);
+        }
+
+        .table-header .header li::after {
+            content: "\25BC";
+            padding-left: 5px;
+            font-weight: normal;
+            font-size: .75em;
+        }
+
+.list-table .header li.active {
+    border-top: 1px solid #0e64d5;
+    background:rgba(41, 109, 193,.15);
+}
+
+.table-header .header li.active-arrow::after {
+    content: "\25B2";
+    padding-left: 5px;
+    font-weight: normal;
+    font-size: .75em;
+}
+
+.table-overflow {
+    overflow: hidden;
+    max-height: 500px;
+}
+
+    .table-overflow:hover {
+        overflow-y: scroll;
+    }
+
+.hidden-label {
+    display: none;
+    font-weight: bold;
+    color: #ffcd4a;
+}
+
+.pagination-section ul {
+    margin: 0;
+    padding: 0;
+}
+
+.pagination {
+    background: #2a568f;
+    padding: 5px 10px;
+    color: #fff;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+    .pagination.current, .pagination:hover {
+        background: #296dc1;
+    }
+
+@media (max-width: 768px) {
+
+    .list-table .header {
+        display: none;
+    }
+
+    .list-table ul {
+        padding: 10px;
+    }
+
+        .list-table ul:first-child {
+            border-top: none;
+        }
+
+        .list-table ul li {
+            display: block;
+            float: left;
+            width: 25% !important;
+        }
+
+    .hidden-label {
+        display: block;
+        float: left;
+        clear: left;
+        padding: 0;
+        margin: 0 0 4px 0;
+        color: #2a568f;
+        border-bottom: 1px solid #bbb;
+    }
+
+    .list-table ul li span {
+        float: left;
+        clear: left;
+    }
+
+    .list-table li .iconSprite {
+        margin: 0;
+    }
 }

@@ -6,18 +6,22 @@
 <div>
 
 </div>
-<table class="table table-striped">
-    @* Draw grid header *@
-    <thead>
-        <tr>
-            @RenderGridHeader()
-        </tr>
-    </thead>
-    <tbody>
-        @RenderGridBody()
-    </tbody>
 
-</table>
+<div class="list-table" id="@Model.Name" >
+    @* Draw grid header *@
+   
+    <div class="table-header">
+        <ul class="header">
+           
+                @RenderGridHeader()
+           
+        </ul>
+    </div>
+    <div class="table-results table-overflow">
+        @RenderGridBody()
+    </div>
+
+</div>
 
 @RenderGridFooter()
 
@@ -27,9 +31,9 @@
 {
     foreach (IColumn column in @Model.Columns)
     {
-        <th>
+        <li>
             @column.Title
-        </th>
+        </li>
     }
 }
 
@@ -37,31 +41,37 @@
 {
     if (!@Model.Data.Any())
     {
-        <tr>
-            <td>
+        <ul class="results">
+            <li>
                 @Model.EmptyGridText
-            </td>
-        </tr>
+            </li>
+        </ul>
     }
     else
     {
         foreach (var customer in @Model.Data)
         {
-            <tr>
+            <ul class="results">
                 @foreach (var propertyInfo in customer.GetType().GetProperties())
                 {
-                    <td>
+                    <li>
                         @propertyInfo.GetValue(customer, null)
-                    </td>
+                    </li>
                 }
-            </tr>
+            </ul>
         }
     }
 }
 
 @helper RenderGridFooter()
 {
-    <p>
-        Paging here.
-    </p>
+    <div class="pagination-section">
+       <ul>
+           <li class="easing pagination current">1</li>
+           <li class="easing pagination">2</li>
+           <li class="easing pagination">3</li>
+           <li class="easing pagination">4</li>
+           <li class="easing pagination">5</li>
+       </ul>
+    </div>
 }
