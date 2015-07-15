@@ -1,0 +1,13 @@
+﻿@model Grid.NET.Web.Models.HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Grid.NET</h1>    
+</div>
+
+<div class="row">
+    @Html.Partial("_Grid" , Model.Customers.ConvertToGrid())
+</div>

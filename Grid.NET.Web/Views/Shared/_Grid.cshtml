@@ -1,0 +1,67 @@
+﻿@using Grid.NET.Infrastructure.Interfaces.Columns
+@model Grid.NET.Infrastructure.Interfaces.IGrid
+
+@if (Model == null) { return; }
+
+<div>
+
+</div>
+<table class="table table-striped">
+    @* Draw grid header *@
+    <thead>
+        <tr>
+            @RenderGridHeader()
+        </tr>
+    </thead>
+    <tbody>
+        @RenderGridBody()
+    </tbody>
+
+</table>
+
+@RenderGridFooter()
+
+
+
+@helper RenderGridHeader()
+{
+    foreach (IColumn column in @Model.Columns)
+    {
+        <th>
+            @column.Title
+        </th>
+    }
+}
+
+@helper RenderGridBody()
+{
+    if (!@Model.Data.Any())
+    {
+        <tr>
+            <td>
+                @Model.EmptyGridText
+            </td>
+        </tr>
+    }
+    else
+    {
+        foreach (var customer in @Model.Data)
+        {
+            <tr>
+                @foreach (var propertyInfo in customer.GetType().GetProperties())
+                {
+                    <td>
+                        @propertyInfo.GetValue(customer, null)
+                    </td>
+                }
+            </tr>
+        }
+    }
+}
+
+@helper RenderGridFooter()
+{
+    <p>
+        Paging here.
+    </p>
+}

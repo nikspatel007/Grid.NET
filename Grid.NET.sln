@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid.NET.Web", "Grid.NET.Web\Grid.NET.Web.csproj", "{158E44F2-E556-4F40-AA1B-4F4DFB76FC94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid.NET.Web.Tests", "Grid.NET.Web.Tests\Grid.NET.Web.Tests.csproj", "{0ADE0EAB-0F2B-400C-B712-8FB5843DBD17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid.NET.Infrastructure", "Grid.NET.Infrastructure\Grid.NET.Infrastructure.csproj", "{E768D03B-8BA8-4A1E-8A54-99655FB36E2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid.NET.Infrastructure.Tests", "Grid.NET.Infrastructure.Tests\Grid.NET.Infrastructure.Tests.csproj", "{821DECE8-4FB8-4E36-B6AD-D193F6C87B89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{158E44F2-E556-4F40-AA1B-4F4DFB76FC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158E44F2-E556-4F40-AA1B-4F4DFB76FC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158E44F2-E556-4F40-AA1B-4F4DFB76FC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158E44F2-E556-4F40-AA1B-4F4DFB76FC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ADE0EAB-0F2B-400C-B712-8FB5843DBD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ADE0EAB-0F2B-400C-B712-8FB5843DBD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ADE0EAB-0F2B-400C-B712-8FB5843DBD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ADE0EAB-0F2B-400C-B712-8FB5843DBD17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E768D03B-8BA8-4A1E-8A54-99655FB36E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E768D03B-8BA8-4A1E-8A54-99655FB36E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E768D03B-8BA8-4A1E-8A54-99655FB36E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E768D03B-8BA8-4A1E-8A54-99655FB36E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{821DECE8-4FB8-4E36-B6AD-D193F6C87B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821DECE8-4FB8-4E36-B6AD-D193F6C87B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821DECE8-4FB8-4E36-B6AD-D193F6C87B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821DECE8-4FB8-4E36-B6AD-D193F6C87B89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
