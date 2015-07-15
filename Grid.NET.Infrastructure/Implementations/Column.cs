@@ -1,5 +1,4 @@
 ﻿using Grid.NET.Infrastructure.Interfaces;
-using Grid.NET.Infrastructure.Interfaces.Columns;
 
 namespace Grid.NET.Infrastructure.Implementations
 {

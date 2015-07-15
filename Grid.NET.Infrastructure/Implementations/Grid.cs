@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Grid.NET.Infrastructure.Extensions;
 using Grid.NET.Infrastructure.Interfaces;
-using Grid.NET.Infrastructure.Interfaces.Columns;
+using Grid.NET.Infrastructure.Models;
 
 namespace Grid.NET.Infrastructure.Implementations
 {
@@ -12,6 +12,7 @@ namespace Grid.NET.Infrastructure.Implementations
         #region private Variables
 
         private List<IColumn> _columns;
+        private bool _isPaginationEnabled;
 
         #endregion
 
@@ -19,10 +20,11 @@ namespace Grid.NET.Infrastructure.Implementations
 
         public IEnumerable<object> Data { get; private set; }
 
-        public IEnumerable<IColumn> Columns
-        {
-            get { return _columns; }
-        }
+        public PaginationModel<object> Pagination { get; private set; }
+
+        public IEnumerable<IColumn> Columns{ get { return _columns; } }
+
+        public bool IsPagingEnabled { get { return _isPaginationEnabled;} }
 
         public string EmptyGridText { get; set; }
 
@@ -30,19 +32,23 @@ namespace Grid.NET.Infrastructure.Implementations
 
         public bool IsSortable { get; set; }
 
-        public bool IsPagable { get; set; }
-
         #endregion
-
-        public Grid(IEnumerable<T> list)
-        {
-            Init(list , new Guid().ToString());
-        }
 
         public Grid(IEnumerable<T> list , string name)
         {
             Init(list, name);           
         }
+
+        #region Public Functions
+
+        public void WithPageSize(int pageSize , int variation = 3)
+        {
+            _isPaginationEnabled = true;
+
+            Pagination = new PaginationModel<object>(Data , pageSize , variation);
+        }
+
+        #endregion
 
         #region Private functions
 
@@ -69,6 +75,7 @@ namespace Grid.NET.Infrastructure.Implementations
         {
             Data = enumerable.Cast<object>().ToList();
 
+            Pagination = new PaginationModel<object>(Data , 5 , 3);
             _columns = new List<IColumn>();
             _columns = GenerateColumns();
 

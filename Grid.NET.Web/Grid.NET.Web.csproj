@@ -189,7 +189,7 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Grid.NET.Infrastructure\Grid.NET.Infrastructure.csproj">
+    <ProjectReference Include="..\Grid.NET.Infrastructure\Grid.NET.Infrastructure.csproj">
       <Project>{e768d03b-8ba8-4a1e-8a54-99655fb36e2d}</Project>
       <Name>Grid.NET.Infrastructure</Name>
     </ProjectReference>

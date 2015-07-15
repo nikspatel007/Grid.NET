@@ -2,7 +2,6 @@
 using System.Linq;
 using Grid.NET.Infrastructure.Implementations;
 using Grid.NET.Infrastructure.Interfaces;
-using Grid.NET.Infrastructure.Interfaces.Columns;
 using Grid.NET_Infrastructure.Tests.Mock;
 using Grid.NET_Infrastructure.Tests.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -17,7 +16,7 @@ namespace Grid.NET_Infrastructure.Tests.Implementations
         public GridTests()
         {
             List<Customer> list = DataSets.GetCustomers();
-            _grid = new Grid<Customer>(list);
+            _grid = new Grid<Customer>(list , "TestGrid");
         }
 
         /// <summary>

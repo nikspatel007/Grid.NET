@@ -83,8 +83,11 @@
     <Compile Include="Extensions\PropertyExtensions.cs" />
     <Compile Include="Implementations\Column.cs" />
     <Compile Include="Implementations\Grid.cs" />
-    <Compile Include="Interfaces\Columns\IColumn.cs" />
+    <Compile Include="Implementations\Pagination.cs" />
+    <Compile Include="Interfaces\IColumn.cs" />
     <Compile Include="Interfaces\IGrid.cs" />
+    <Compile Include="Interfaces\IPagination.cs" />
+    <Compile Include="Models\PaginationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

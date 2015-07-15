@@ -1,4 +1,4 @@
-﻿namespace Grid.NET.Infrastructure.Interfaces.Columns
+﻿namespace Grid.NET.Infrastructure.Interfaces
 {
     public interface IColumn
     {

@@ -6,12 +6,11 @@ namespace Grid.NET_Infrastructure.Tests.Mock
 {
     public static class DataSets
     {
-        public static List<Customer> GetCustomers()
+        public static List<Customer> GetCustomers(int listSize = 100)
         {
             List<Customer> list = new List<Customer>();
 
             Random random = new Random();
-            int listSize = random.Next(15, 150);
 
             for(int i=1 ; i<= listSize ; i++)
             {

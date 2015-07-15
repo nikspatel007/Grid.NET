@@ -57,6 +57,7 @@
     <Compile Include="Implementations\GridTests.cs" />
     <Compile Include="Mock\DataSets.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\PaginationModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

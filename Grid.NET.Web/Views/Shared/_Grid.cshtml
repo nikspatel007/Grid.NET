@@ -1,4 +1,4 @@
-﻿@using Grid.NET.Infrastructure.Interfaces.Columns
+﻿@using Grid.NET.Infrastructure.Interfaces
 @model Grid.NET.Infrastructure.Interfaces.IGrid
 
 @if (Model == null) { return; }
@@ -65,13 +65,23 @@
 
 @helper RenderGridFooter()
 {
-    <div class="pagination-section">
-       <ul>
-           <li class="easing pagination current">1</li>
-           <li class="easing pagination">2</li>
-           <li class="easing pagination">3</li>
-           <li class="easing pagination">4</li>
-           <li class="easing pagination">5</li>
-       </ul>
-    </div>
+
+    if (@Model.IsPagingEnabled)
+    {
+        <div class="pagination-section">
+            <ul>
+                @for (int i = Model.Pagination.IndexStart; i <= Model.Pagination.IndexEnd; i++)
+                {
+                    if (Model.Pagination.CurrentPage == i)
+                     {
+                         <li class="easing pagination current">@i</li>
+                     }
+                    else
+                    {
+                        <li class="easing pagination">@i</li>
+                    }
+                }
+            </ul>
+        </div>
+    }
 }
