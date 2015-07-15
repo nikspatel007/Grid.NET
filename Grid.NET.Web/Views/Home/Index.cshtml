@@ -9,5 +9,10 @@
 </div>
 
 <div class="row">
-    @Html.Partial("_Grid" , Model.Customers.ConvertToGrid())
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="widget-block">
+            @Html.Partial("_Grid", Model.Customers.ConvertToGrid())
+        </div>
+    </div>
+
 </div>

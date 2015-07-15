@@ -4,6 +4,7 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: #e2e2e2;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -27,6 +28,21 @@ textarea {
 }
 
 /*NEWLY ADDED FOR GRID*/
+.navbar {
+    background: #002252;
+}
+
+    .navbar .navbar-nav a, .navbar-brand {
+        color: #fff !important;
+    }
+
+
+.widget-block {
+    background: #fff;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 2px 2px 5px #888;
+}
 
 .easing {
     transition: all .25s;
@@ -35,6 +51,7 @@ textarea {
 
 .list-table {
     margin-bottom: 10px;
+      border: 1px solid #ddd;
 }
 
     .list-table ul {
@@ -58,7 +75,7 @@ textarea {
     position: relative;
     vertical-align: top;
     line-height: normal;
-    padding: 7px 5px 3px 5px;
+    padding: 5px;
 }
 
 .table-header {
@@ -75,7 +92,7 @@ textarea {
     }
 
         .table-header .header li:hover {
-          background:rgba(41, 109, 193,.15);
+            background: rgba(41, 109, 193,.15);
         }
 
         .table-header .header li::after {
@@ -87,7 +104,7 @@ textarea {
 
 .list-table .header li.active {
     border-top: 1px solid #0e64d5;
-    background:rgba(41, 109, 193,.15);
+    background: rgba(41, 109, 193,.15);
 }
 
 .table-header .header li.active-arrow::after {
