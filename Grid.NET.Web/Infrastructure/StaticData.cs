@@ -21,7 +21,7 @@ namespace Grid.NET.Web.Infrastructure
                   FirstName = GetRandomFirstName(random.Next(1 , 100) % 5),
                   LastName = GetRandomLastName(random.Next(1, 100) % 5),
                   DateOfBirth = DateTime.Today.AddDays(i *  listSize),
-                  CurrentBalance = random.Next(-500 , 50000000),
+                  CurrentBalance = random.Next(-500 , 5000),
                   IsActive =  (random.Next(1 , 10) % 2 == 0)
               };   
 

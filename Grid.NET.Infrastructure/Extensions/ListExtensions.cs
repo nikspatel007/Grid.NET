@@ -6,10 +6,10 @@ namespace Grid.NET.Infrastructure.Extensions
 {
     public static class ListExtensions
     {
-        public static IGrid ConvertToGrid<T>(this IEnumerable<T> enumerable , string gridName) where T : class
+        public static IGrid ConvertToGrid<T>(this IEnumerable<T> enumerable , string gridName , int pageSize = 8 , int pageVariation = 3) where T : class
         {
-            Grid<T> grid = new Grid<T>(enumerable, gridName);
-                grid.WithPageSize(8);
+            IGrid grid = new Grid<T>(enumerable, gridName)
+                .WithPageSize(pageSize , pageVariation);
             return grid;
         }
     }

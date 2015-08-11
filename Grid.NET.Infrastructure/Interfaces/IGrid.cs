@@ -33,7 +33,7 @@ namespace Grid.NET.Infrastructure.Interfaces
 
         #region Functions
 
-        void WithPageSize(int pageSize, int variation = 3);
+        IGrid WithPageSize(int pageSize, int variation = 3);
 
         #endregion
 

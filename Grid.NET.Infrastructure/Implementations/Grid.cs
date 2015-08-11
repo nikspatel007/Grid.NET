@@ -41,11 +41,13 @@ namespace Grid.NET.Infrastructure.Implementations
 
         #region Public Functions
 
-        public void WithPageSize(int pageSize , int variation = 3)
+        public IGrid WithPageSize(int pageSize , int variation = 3)
         {
             _isPaginationEnabled = true;
 
             Pagination = new PaginationModel<object>(Data , pageSize , variation);
+
+            return this;
         }
 
         #endregion
